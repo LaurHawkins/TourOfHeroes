@@ -1,0 +1,57 @@
+<!-- 
+  Tutorial   https://angular.io/tutorial/toh-pt2
+  This new block is step 2 
+-->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
+
+<!-- 
+  We removed this during Step5. Add navigation
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>&nbsp;
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<br>
+
+-->
+
+<!--
+  we removed this in 5. Add Navigation
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+-->
+
+<!--Q: What is the placeholder about?-->
+<!--
+  This was through Step 2 - when the hero details were in the hereos component
+  before they were moved to the hero detail component
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div>id: {{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero Name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+  </div>
+</div>
+-->
+
+<!-- 
+  This block was up through Step 1. the hero editor
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+  <label for="name">Hero name: </label>
+  <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
+-->
