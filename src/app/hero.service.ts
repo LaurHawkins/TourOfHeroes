@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Hero } from './hero';
+import { Hero } from './heroes/hero';
 import { HEROES } from './mock-heroes';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
@@ -23,8 +23,8 @@ export class HeroService {
     // Error handling will be added in the next step of the tutorial.
 
     const hero = HEROES.find(h => h.id === id)!;
-    this.messageService.add(`HeroService: fetched hero id=%{id}`);
-    this.log(`fetched hero id=%{id}`);
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    //this.log(`fetched hero id=${id}`);
     return of(hero);
   }
 

@@ -2,6 +2,7 @@
   Tutorial   https://angular.io/tutorial/toh-pt2
   This new block is step 2 
 -->
+
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
@@ -32,10 +33,20 @@
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 -->
 
-<!--Q: What is the placeholder about?-->
+<!--Q/A: What is the placeholder about?
+      it puts the faint word "name" in the input field so user knows what to type in.
+
+-->
 <!--
   This was through Step 2 - when the hero details were in the hereos component
-  before they were moved to the hero detail component
+  before they were moved to the hero detail component 
+[(ngModel)] is a template driven form.  selectedHero.name is what we are binding to.
+
+
+
+-->
+<!--
+This one:
 <div *ngIf="selectedHero">
   <h2>{{selectedHero.name | uppercase}} Details</h2>
   <div>id: {{selectedHero.id}}</div>
@@ -44,6 +55,7 @@
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
   </div>
 </div>
+
 -->
 
 <!-- 
